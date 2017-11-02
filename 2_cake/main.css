@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald:700");
+#alert {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 10vw;
+  text-align: center;
+  text-transform: uppercase;
+  display: none;
+  background: #E32323;
+  color: #FDFDFD;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000; }
+  #alert.active {
+    display: flex; }
+    #alert.active .text {
+      animation: swell .2s ease; }
+    #alert.active .logo {
+      position: absolute;
+      z-index: -1;
+      top: 1rem;
+      left: 0;
+      right: 0; }
+    #alert.active .logo-fill g {
+      fill: #bb1818; }
+
+.invitation {
+  margin-top: 10vh;
+  font-family: "Oswald", sans-serif;
+  font-size: 2vw;
+  text-align: center; }
+
+.plate {
+  height: 200px;
+  cursor: pointer;
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.cake {
+  width: 150px;
+  margin-top: 40px;
+  height: 70px;
+  background: #f7d7b6;
+  position: absolute;
+  border-radius: 10px;
+  border: 5px solid #693455; }
+
+.candle .flame {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -80px; }
+  .candle .flame .fire {
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-radius: 2px;
+    width: 12px;
+    margin: 0 auto;
+    height: 12px;
+    transform: scale(0) rotate(33deg) skewY(15deg);
+    background: #ffa600;
+    animation: fire1 .7s ease infinite;
+    animation-direction: forward;
+    animation-fill-mode: forwards; }
+    .candle .flame .fire:nth-child(even) {
+      animation-name: fire2; }
+    .candle .flame .fire:nth-child(1) {
+      animation-delay: 0.1s; }
+    .candle .flame .fire:nth-child(2) {
+      animation-delay: 0.2s; }
+    .candle .flame .fire:nth-child(3) {
+      animation-delay: 0.3s; }
+    .candle .flame .fire:nth-child(4) {
+      animation-delay: 0.4s; }
+    .candle .flame .fire:nth-child(5) {
+      animation-delay: 0.5s; }
+    .candle .flame .fire:nth-child(6) {
+      animation-delay: 0.6s; }
+.candle .stick {
+  border: 5px solid #693455;
+  width: 10px;
+  height: 60px;
+  margin: 0 auto;
+  position: absolute;
+  top: -70px;
+  left: 0;
+  right: 0;
+  background: repeating-linear-gradient(45deg, #E32323, #E32323 10px, #FDFDFD 10px, #FDFDFD 20px); }
+
+.icing {
+  background: #e79692;
+  border: 5px solid #693455;
+  height: 10%;
+  position: absolute;
+  border-radius: 8px 8px 0 0;
+  left: -8px;
+  right: -8px;
+  top: -20%;
+  z-index: 2; }
+
+.filling {
+  border-radius: 8px 0 0 8px;
+  width: 90%;
+  height: 40%;
+  background: #e79692;
+  position: absolute;
+  top: 35%;
+  right: 0;
+  overflow: hidden;
+  z-index: 1; }
+  .filling:before {
+    content: "";
+    background: #FDFDFD;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 40%; }
+
+.sponge {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.dot {
+  background: #efbe8d;
+  border-radius: 100%;
+  position: absolute;
+  width: 5px;
+  height: 5px; }
+  .dot:nth-child(1) {
+    top: 5px;
+    right: 35%; }
+  .dot:nth-child(2) {
+    top: 10px;
+    right: 10%; }
+  .dot:nth-child(3) {
+    top: 11px;
+    right: 45%; }
+  .dot:nth-child(4) {
+    bottom: 10px;
+    right: 15%; }
+
+@keyframes swell {
+  0%,
+  85%,
+  100% {
+    transform: scale(1); }
+  70% {
+    transform: scale(1.2); } }
+@keyframes fire1 {
+  0% {
+    transform: scale(0) rotate(45deg) translateX(-20px) translateY(10px) skewY(15deg); }
+  50% {
+    transform: scale(1) rotate(45deg) translateX(-20px) translateY(-10px) skewY(15deg); }
+  100% {
+    transform: scale(0) rotate(45deg) translateX(-20px) translateY(-50px) skewY(15deg); } }
+@keyframes fire2 {
+  0% {
+    transform: scale(0) rotate(45deg) translateX(0px) translateY(10px) skewY(15deg); }
+  50% {
+    transform: scale(1) rotate(45deg) translateX(0px) translateY(-10px) skewY(15deg); }
+  100% {
+    transform: scale(0) rotate(45deg) translateX(0px) translateY(-50px) skewY(15deg); } }
+
+/*# sourceMappingURL=main.css.map */

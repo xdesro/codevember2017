@@ -25,8 +25,13 @@ const makeGrid = width => (halfWindowWidth / 18) * width;
 const getRandomStarPosition = (axis) => {
   const randomAngle = Math.random() * Math.PI * 2;
   const randomRadius = Math.random() * makeGrid(3) + makeGrid(3.5);
-  console.log(randomAngle, randomRadius);
-  return halfWindowWidth + randomRadius * Math.cos(randomAngle);
+  let offset;
+  if(axis == "x") {
+    offset = halfWindowWidth;
+  } else {
+    offset = halfWindowHeight;
+  }
+  return offset + randomRadius * Math.cos(randomAngle);
 };
 
 const colors = {
@@ -165,13 +170,10 @@ window.onload = () => {
       drawShape(shapes[shape], ctx);
     }
     
-    for (let i = 0; i < 15; i += 1) {
+    for (let i = 0; i < 10; i += 1) {
       drawStars(ctx);
     }
     drawPlanet("./planet.svg", ctx);
-    // angle += Math.PI / 600;
-
-    // requestAnimationFrame(doTheThing);
   };
   
   doTheThing();

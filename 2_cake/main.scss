@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:700');
+
+$oswald: 'Oswald',sans-serif;
+$red: #E32323;
+$tan: #f7d7b6;
+$sienna: #efbe8d;
+$pink: #e79692;
+$orange: #ffa600;
+$purple: #693455;
+$white: #FDFDFD;
+
+#alert {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $oswald;
+  font-size: 10vw;
+  text-align: center;
+  text-transform: uppercase;
+  display: none;
+  background: $red;
+  color: $white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  &.active {
+    display: flex;
+    .text {
+      animation: swell .2s ease;
+    }
+    .logo {
+      position: absolute;
+      z-index: -1;
+      top: 1rem;
+      left: 0;
+      right: 0;
+    }
+    .logo-fill g {
+      fill: darken($red, 10%);
+    }
+  }
+}
+
+.invitation {
+  margin-top: 10vh;
+  font-family: $oswald;
+  font-size: 2vw;
+  text-align: center;
+}
+
+.plate {
+  height: 200px;
+  cursor: pointer;
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.cake {
+  width: 150px;
+  margin-top: 40px;
+  height: 70px;
+  background: $tan;
+  position: absolute;
+  border-radius: 10px;
+  border: 5px solid $purple;
+}
+
+.candle {
+  .flame {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -80px;
+    .fire {
+      position: absolute;
+      left: 0;
+      right: 0;
+      border-radius: 2px;
+      width: 12px;
+      margin: 0 auto;
+      height: 12px;
+      transform: scale(0) rotate(33deg) skewY(15deg);
+      background: $orange;
+      animation: fire1 .7s ease infinite;
+      animation-direction: forward;
+      animation-fill-mode: forwards;
+      &:nth-child(even) {
+        animation-name: fire2;
+      }
+      @for $i from 1 through 6 {
+        &:nth-child(#{$i}) {
+          animation-delay: $i * 0.1s;
+        }
+      }
+    }
+  }
+  .stick {
+    border: 5px solid $purple;
+    width: 10px;
+    height: 60px;
+    margin: 0 auto;
+    position: absolute;
+    top: -70px;
+    left: 0;
+    right: 0;
+    background: repeating-linear-gradient( 45deg, $red, $red 10px, $white 10px, $white 20px)
+  }
+}
+
+.icing {
+  background: $pink;
+  border: 5px solid $purple;
+  height: 10%;
+  position: absolute;
+  border-radius: 8px 8px 0 0;
+  left: -8px;
+  right: -8px;
+  top: -20%;
+  z-index: 2;
+}
+
+.filling {
+  border-radius: 8px 0 0 8px;
+  width: 90%;
+  height: 40%;
+  background: $pink;
+  position: absolute;
+  top: 35%;
+  right: 0;
+  overflow: hidden;
+  z-index: 1;
+  &:before {
+    content: "";
+    background: $white;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 40%;
+  }
+}
+
+.sponge {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.dot {
+  background: $sienna;
+  border-radius: 100%;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  &:nth-child(1) {
+    top: 5px;
+    right: 35%
+  }
+  &:nth-child(2) {
+    top: 10px;
+    right: 10%;
+  }
+  &:nth-child(3) {
+    top: 11px;
+    right: 45%;
+  }
+  &:nth-child(4) {
+    bottom: 10px;
+    right: 15%;
+  }
+}
+
+@keyframes swell {
+  0%,
+  85%,
+  100% {
+    transform: scale(1)
+  }
+  70% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes fire1 {
+  0% {
+    transform: scale(0) rotate(45deg) translateX(-20px) translateY(10px) skewY(15deg);
+  }
+  50% {
+    transform: scale(1) rotate(45deg) translateX(-20px) translateY(-10px) skewY(15deg);
+  }
+  100% {
+    transform: scale(0) rotate(45deg) translateX(-20px) translateY(-50px) skewY(15deg);
+  }
+}
+
+@keyframes fire2 {
+  0% {
+    transform: scale(0) rotate(45deg) translateX(0px) translateY(10px) skewY(15deg);
+  }
+  50% {
+    transform: scale(1) rotate(45deg) translateX(0px) translateY(-10px) skewY(15deg);
+  }
+  100% {
+    transform: scale(0) rotate(45deg) translateX(0px) translateY(-50px) skewY(15deg);
+  }
+}
