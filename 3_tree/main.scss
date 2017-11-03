@@ -1,0 +1,124 @@
+$cove: #7294b9;
+$bird: #c6ecf7;
+$twilight: #effdff;
+$onahau: #d4f0fe;
+
+.wrapper {
+    height: 500px;
+    width: 500px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+.mask {
+    width: 31.25vmin;
+    height: 31.25vmin;
+    transform: rotate(45deg);
+    overflow:hidden;
+    border: 1px solid red;
+    background: linear-gradient(135deg, $cove 0%, $bird 45%);
+    position: relative;
+}
+.inner {
+    transform: rotate(-45deg);
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+}
+.ground {
+    background: $twilight;
+    width: 45vmin;
+    height: 30vmin;
+    position: absolute;
+    top: 11.06vmin;
+    left: -57%;
+}
+.backdrop {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index: -1;
+    .mountain {
+        position: absolute;
+        overflow:hidden;
+        transform: rotate(-45deg);
+        background: #fff;
+        width: 15.84vmin;
+        height: 15.84vmin;
+        &:before {
+            content: "";
+            background-color: $onahau;
+            position: absolute;
+            top: 7%;
+            left: 63%;
+            height: 100%;
+            width: 100%;
+            transform: rotate(45deg)
+        }
+        &:nth-of-type(1){
+            top: 7.16vmin;
+            left: -15.55vmin;
+            transform:rotate(-45deg);
+            z-index: 2;
+        }
+        &:nth-of-type(2){
+            top: 7.96vmin;
+            left: -5.11vmin;
+            transform: rotate(-45deg) scale(1.6);
+            z-index: 1;
+            &:before {
+                background: linear-gradient(to right, #b8def3, #bde3f8);
+            }
+        }
+        &:nth-of-type(3){
+            top: 4.42vmin;
+            left: 6.79vmin;
+            z-index: 2;
+            transform: rotate(-45deg) scale(.58);
+            &:before {
+                background: #caeaf7;
+            }
+        }
+    }
+    .cloud {
+        position: absolute;
+        overflow:hidden;
+        background: #fff;
+        width: 3vmin;
+        height: 3vmin;
+        &:before {
+            content: "";
+            background-color: #a8def6;
+            position: absolute;
+            top: 31%;
+            left: 12%;
+            height: 200%;
+            width: 200%;
+            transform: rotate(45deg)
+        }
+        &:nth-of-type(1) {
+            transform: rotate(-45deg);
+            top: -2vmin;
+            left: 9vmin;
+            z-index: 1;
+        }
+        &:nth-of-type(2) {
+            transform: rotate(-45deg) scale(0.75);
+            top: -2vmin;
+            left: 11vmin;
+            &:after {
+                content: "";
+                background-color: #a8def6;
+                position: absolute;
+                top: 7%;
+                left: -68%;
+                height: 100%;
+                width: 100%;
+                transform: rotate(45deg)
+            }
+        }
+    }
+}
