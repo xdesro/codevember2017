@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="786px" height="1149px" viewBox="0 0 786 1149" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>sapphire</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="317.744565 0.1569046 0.501866406 264.328437 0.501866406 638.819665 317.744565 901.254218 633.889092 638.819665 633.889092 264.328437"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-620.000000, -448.000000)">
+            <g id="sapphire" transform="translate(624.000000, 448.000000)">
+                <g id="sheen" stroke="#ADE7F2" stroke-width="11" fill="#FFFFFF">
+                    <path d="M776.5,388.5 L776.5,760.608855" id="sheen21"></path>
+                    <path d="M737.5,389.5 L737.5,761.608855" id="sheen20"></path>
+                    <path d="M699.5,316.5 L699.5,832.608855" id="sheen19"></path>
+                    <path d="M660.5,284.5 L660.5,865.608855" id="sheen18"></path>
+                    <path d="M621.5,268.5 L621.5,935.608855" id="sheen17"></path>
+                    <path d="M582.5,199.5 L582.5,950.608855" id="sheen16"></path>
+                    <path d="M544.5,162.5 L544.5,986.608855" id="sheen15"></path>
+                    <path d="M505.5,120.5 L505.5,1029.60886" id="sheen14"></path>
+                    <path d="M466.5,81.5 L466.5,1067.60886" id="sheen13"></path>
+                    <path d="M427.5,41.5 L427.5,1107.60886" id="sheen12"></path>
+                    <path d="M389.5,0.5 L389.5,1148.60886" id="sheen11"></path>
+                    <path d="M350.5,41.5 L350.5,1107.60886" id="sheen10"></path>
+                    <path d="M311.5,81.5 L311.5,1067.60886" id="sheen9"></path>
+                    <path d="M272.5,120.5 L272.5,1029.60886" id="sheen8"></path>
+                    <path d="M234.5,162.5 L234.5,986.608855" id="sheen7"></path>
+                    <path d="M195.5,199.5 L195.5,950.608855" id="sheen6"></path>
+                    <path d="M156.5,241.5 L156.5,908.608855" id="sheen5"></path>
+                    <path d="M117.5,284.5 L117.5,865.608855" id="sheen4"></path>
+                    <path d="M79.5,316.5 L79.5,832.608855" id="sheen3"></path>
+                    <path d="M40.5,389.5 L40.5,761.608855" id="sheen2"></path>
+                    <path d="M1.5,390.5 L1.5,762.608855" id="sheen1"></path>
+                </g>
+                <g id="gem" transform="translate(72.000000, 127.000000)">
+                    <g id="gemborder">
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <path stroke="#FFFFFF" stroke-width="20" d="M317.755672,-12.8654441 L643.889092,259.652844 L643.889092,643.515039 L317.755628,914.241502 L-9.49813359,643.525439 L-9.49813359,259.642447 L317.755672,-12.8654441 Z"></path>
+                    </g>
+                    <polygon id="inneroutline" stroke="#026FB8" stroke-width="11" points="146.894624 350.464342 146.894624 552.501082 318.76996 696.351298 490.645295 552.501082 490.645295 350.464342 318.76996 201.650439"></polygon>
+                    <path d="M123.496039,339.019138 L20.9392107,280.500203" id="vertex6" stroke="#026FB8" stroke-width="11"></path>
+                    <path d="M126.730433,562.492158 L23.1610132,621.586205" id="vertex5" stroke="#026FB8" stroke-width="11"></path>
+                    <path d="M319.171952,731.113202 L319.171952,852.791295" id="vertex4" stroke="#026FB8" stroke-width="11"></path>
+                    <path d="M511.746188,560.65868 L608.537374,623.98842" id="vertex3" stroke="#026FB8" stroke-width="11"></path>
+                    <path d="M513.614075,336.001026 L619.911593,277.541077" id="vertex2" stroke="#026FB8" stroke-width="11"></path>
+                    <path d="M318.763966,166.955434 L318.763966,49.0617742" id="vertex1" stroke="#026FB8" stroke-width="11"></path>
+                    <polygon id="outeroutline" stroke="#026FB8" stroke-width="11" points="317.744565 0.1569046 0.501866406 264.328437 0.501866406 638.819665 317.744565 901.254218 633.889092 638.819665 633.889092 264.328437"></polygon>
+                </g>
+                <g id="stars" transform="translate(428.000000, 146.000000)" stroke-width="11" stroke="#ADE7F2" fill="#FFFFFF">
+                    <polygon id="bigstar" points="166.381069 63 140.323832 127.005645 81 151.687963 140.323832 175.729181 166.381069 242.835968 193.038572 175.729181 251.762139 151.687963 193.038572 127.005645"></polygon>
+                    <polygon id="smallstar" points="45.5781052 0 31.6682362 34.1674806 0 47.3433905 31.6682362 60.1770689 45.5781052 96 59.8084082 60.1770689 91.1562104 47.3433905 59.8084082 34.1674806"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

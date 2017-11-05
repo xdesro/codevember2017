@@ -1,4 +1,13 @@
 anime({
+  targets: ".mask",
+  scale: [0,1],
+  rotate: ['-100deg', '45deg'],
+  duration: 1200,
+  autoplay:true,
+  easing: 'easeOutElastic',
+  elasticity: 400
+})
+anime({
   targets: ".clouds",
   translateX: [-190, 60],
   loop: true,

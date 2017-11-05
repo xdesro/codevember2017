@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
+body {
+  font-family: "Roboto Mono", monospace; }
+
+.wrapper {
+  width: 100vmin;
+  height: 100vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+svg {
+  width: 500px; }
+
+#stars path {
+  transform: scale(0); }
+
+#sheen {
+  fill: #FFF;
+  stroke: #ADE7F2;
+  stroke-width: 11; }
+
+#stars > path {
+  transform-origin: 50% 50%; }
+
+h1 {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: #026FB8; }
+
+/*# sourceMappingURL=main.css.map */
