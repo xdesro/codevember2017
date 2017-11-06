@@ -1,0 +1,25 @@
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+#card {
+  height: 470px;
+  padding: 1rem;
+  width:842px;
+  margin: 0 auto;
+  position: relative;
+}
+.will-you-shut-up {
+  position: absolute;
+  bottom: -110px;
+  right: 0;
+}
+  .will-you-shut-up:hover svg{
+    transform: scale(0.8)
+  }
+.will-you-shut-up svg {
+  transform: scale(0.5);
+}
