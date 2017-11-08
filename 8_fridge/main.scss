@@ -1,0 +1,524 @@
+#tridiv {
+    perspective: 1200px;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    font-size: 50%;
+  }
+  
+  .face {
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .2);
+  }
+  
+  .scene, .shape, .face, .face-wrapper, .cr {
+    position: absolute;
+    transform-style: preserve-3d;
+  }
+  
+  .scene {
+    width: 80em;
+    height: 80em;
+    top: 50%;
+    left: 50%;
+    margin: -40em 0 0 -40em;
+    transform:rotateX(-28deg) rotateY(-51deg); 
+  }
+  
+  .shape {
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    transform-origin: 50%;
+  }
+  
+  .face, .face-wrapper {
+    overflow: hidden;
+    transform-origin: 0 0;
+    backface-visibility: hidden;
+  }
+  
+  .face {
+    background-size: 100% 100% !important;
+    background-position: center;
+  }
+  
+  .face-wrapper .face {
+    left: 100%;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .photon-shader {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .side {
+    left: 50%;
+  }
+  
+  .cr {
+    height: 100%;
+    .side {
+      height: 100%;
+    }
+  }
+  
+  [class*="cuboid"] {
+    .ft {
+      width: 100%;
+      height: 100%;
+    }
+    .bk {
+      width: 100%;
+      height: 100%;
+      left: 100%;
+    }
+    .rt {
+      transform: rotateY(-90deg) translateX(-50%);
+    }
+    .lt {
+      transform: rotateY(90deg) translateX(-50%);
+    }
+    .tp {
+      transform: rotateX(90deg) translateY(-50%);
+    }
+    .bm {
+      transform: rotateX(-90deg) translateY(-50%);
+    }
+    .lt {
+      left: 100%;
+    }
+    .bm {
+      top: 100%;
+    }
+  }
+  
+  /* .fridge-body styles */
+  
+  .fridge-body {
+    transform: translate3D(12em, -22.5em, 12em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 24em;
+    height: 45em;
+    margin: -22.5em 0 0 -12em;
+    .ft {
+      transform: translateZ(12em);
+    }
+    .bk {
+      transform: translateZ(-12em) rotateY(180deg);
+    }
+    .rt, .lt {
+      width: 24em;
+      height: 45em;
+    }
+    .tp, .bm {
+      width: 24em;
+      height: 24em;
+    }
+    .face {
+      background-color: #FFFFFF;
+    }
+  }
+  
+  /* .freezer-door styles */
+  
+  .freezer-door {
+    transform: translate3D(24em, -36.5em, 12em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 2em;
+    height: 14em;
+    margin: -7em 0 0 -1em;
+    .ft {
+      transform: translateZ(10.5em);
+    }
+    .bk {
+      transform: translateZ(-10.5em) rotateY(180deg);
+    }
+    .rt, .lt {
+      width: 21em;
+      height: 14em;
+    }
+    .tp, .bm {
+      width: 2em;
+      height: 21em;
+    }
+    .face {
+      background-color: #FFFFFF;
+    }
+  }
+  
+  /* .fridge-door styles */
+  
+  .fridge-door {
+    transform: translate3D(26em, -15em, 12em) rotateX(0deg) rotateY(11deg) rotateZ(0deg);
+    opacity: 1;
+    width: 2em;
+    height: 25.5em;
+    margin: -12.75em 0 0 -1em;
+    .ft {
+      transform: translateZ(10.5em);
+    }
+    .bk {
+      transform: translateZ(-10.5em) rotateY(180deg);
+    }
+    .rt, .lt {
+      width: 21em;
+      height: 25.5em;
+    }
+    .tp, .bm {
+      width: 2em;
+      height: 21em;
+    }
+    .face {
+      background-color: #FFFFFF;
+    }
+  }
+  
+  /* .freezer-door-base-bottom styles */
+  
+  .freezer-door-base-bottom {
+    transform: translate3D(25.5em, -32em, 21em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 2em;
+    height: 2em;
+    margin: -1em 0 0 -1em;
+    .ft {
+      transform: translateZ(0.5em);
+    }
+    .bk {
+      transform: translateZ(-0.5em) rotateY(180deg);
+    }
+    .rt, .lt {
+      width: 1em;
+      height: 2em;
+    }
+    .tp, .bm {
+      width: 2em;
+      height: 1em;
+    }
+    .face {
+      background-color: #FFFFFF;
+    }
+  }
+  
+  /* .freezer-door-base-top styles */
+  
+  .freezer-door-base-top {
+    transform: translate3D(25.5em, -41em, 21em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 2em;
+    height: 2em;
+    margin: -1em 0 0 -1em;
+    .ft {
+      transform: translateZ(0.5em);
+    }
+    .bk {
+      transform: translateZ(-0.5em) rotateY(180deg);
+    }
+    .rt, .lt {
+      width: 1em;
+      height: 2em;
+    }
+    .tp, .bm {
+      width: 2em;
+      height: 1em;
+    }
+    .face {
+      background-color: #FFFFFF;
+    }
+  }
+  
+  /* .freezer-door-base-top-1 styles */
+  
+  .freezer-door-base-top-1 {
+    transform: translate3D(25.51em, -411em, 211em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 2em;
+    height: 2em;
+    margin: -1em 0 0 -1em;
+    .ft {
+      transform: translateZ(0.5em);
+    }
+    .bk {
+      transform: translateZ(-0.5em) rotateY(180deg);
+    }
+    .rt, .lt {
+      width: 1em;
+      height: 2em;
+    }
+    .tp, .bm {
+      width: 2em;
+      height: 1em;
+    }
+    .face {
+      background-color: #FFFFFF;
+    }
+  }
+  
+  /* .freezer-door-base-top-2 styles */
+  
+  .freezer-door-base-top-2 {
+    transform: translate3D(25.51em, -411em, 211em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 2em;
+    height: 2em;
+    margin: -1em 0 0 -1em;
+    .ft {
+      transform: translateZ(0.5em);
+    }
+    .bk {
+      transform: translateZ(-0.5em) rotateY(180deg);
+    }
+    .rt, .lt {
+      width: 1em;
+      height: 2em;
+    }
+    .tp, .bm {
+      width: 2em;
+      height: 1em;
+    }
+    .face {
+      background-color: #FFFFFF;
+    }
+  }
+  .freezer-door-beam {
+    transform: translate3D(26.5em, -36.5em, 21em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 1em;
+    height: 11em;
+    margin: -5.5em 0 0 -0.5em;
+    .ft {
+      transform: translateZ(0.5em);
+    }
+    .bk {
+      transform: translateZ(-0.5em) rotateY(180deg);
+    }
+    .rt, .lt {
+      width: 1em;
+      height: 11em;
+    }
+    .tp, .bm {
+      width: 1em;
+      height: 1em;
+    }
+    .face {
+      background-color: #FFFFFF;
+    }
+  }
+  
+  /* .fridge-inner styles */
+  
+  .fridge-inner {
+    transform: translate3D(22em, -15em, 12.5em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 4em;
+    height: 25em;
+    margin: -12.5em 0 0 -2em;
+    .face {
+      background-color: #FFFFFF;
+    }
+    .lt {
+      width: 20em;
+      height: 25em;
+      background: #222;
+    }
+  }
+  
+  /* .fridge-door-base-top styles */
+  
+  .fridge-door-base-top {
+    transform: translate3D(29em, -26em, 20.5em) rotateX(0deg) rotateY(11deg) rotateZ(0deg);
+    opacity: 1;
+    width: 2em;
+    height: 2em;
+    margin: -1em 0 0 -1em;
+    .ft {
+      transform: translateZ(0.5em);
+    }
+    .bk {
+      transform: translateZ(-0.5em) rotateY(180deg);
+    }
+    .rt, .lt {
+      width: 1em;
+      height: 2em;
+    }
+    .tp, .bm {
+      width: 2em;
+      height: 1em;
+    }
+    .face {
+      background-color: #FFFFFF;
+    }
+  }
+  
+  /* .fridge-door-base-bottom styles */
+  
+  .fridge-door-base-bottom {
+    transform: translate3D(29em, -17em, 20.5em) rotateX(0deg) rotateY(11deg) rotateZ(0deg);
+    opacity: 1;
+    width: 2em;
+    height: 2em;
+    margin: -1em 0 0 -1em;
+    .ft {
+      transform: translateZ(0.5em);
+    }
+    .bk {
+      transform: translateZ(-0.5em) rotateY(180deg);
+    }
+    .rt, .lt {
+      width: 1em;
+      height: 2em;
+    }
+    .tp, .bm {
+      width: 2em;
+      height: 1em;
+    }
+    .face {
+      background-color: #FFFFFF;
+    }
+  }
+  
+  /* .fridge-door-beam styles */
+  
+  .fridge-door-beam {
+    transform: translate3D(29.75em, -21.5em, 20.5em) rotateX(0deg) rotateY(11deg) rotateZ(0deg);
+    opacity: 1;
+    width: 1em;
+    height: 11em;
+    margin: -5.5em 0 0 -0.5em;
+    .ft {
+      transform: translateZ(0.5em);
+    }
+    .bk {
+      transform: translateZ(-0.5em) rotateY(180deg);
+    }
+    .rt, .lt {
+      width: 1em;
+      height: 11em;
+    }
+    .tp, .bm {
+      width: 1em;
+      height: 1em;
+    }
+    .face {
+      background-color: #FFFFFF;
+    }
+  }
+  
+  /* .floor styles */
+  
+  .floor {
+    transform: translate3D(48em, 0.5em, 48em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 100em;
+    height: 1em;
+    margin: -0.5em 0 0 -50em;
+    .ft {
+      transform: translateZ(50em);
+    }
+    .bk {
+      transform: translateZ(-50em) rotateY(180deg);
+    }
+    .rt, .lt {
+      width: 100em;
+      height: 1em;
+    }
+    .tp, .bm {
+      width: 100em;
+      height: 100em;
+      background: #fff;
+    }
+  }
+  
+  /* .wall,right styles */
+  
+  .wall, right {
+    transform: translate3D(48em, -50em, -2em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 100em;
+    height: 100em;
+    margin: -50em 0 0 -50em;
+  }
+  
+  .wall, right .ft {
+    transform: translateZ(0.5em);
+  }
+  
+  .wall, right .bk {
+    transform: translateZ(-0.5em) rotateY(180deg);
+  }
+  
+  .wall, right .rt, .wall, right .lt {
+    width: 1em;
+    height: 100em;
+  }
+  
+  .wall, right .tp, .wall, right .bm {
+    width: 100em;
+    height: 1em;
+  }
+  
+  .wall, right .face {
+    background-color: #FFFFFF;
+  }
+  
+  /* .wall-right styles */
+  
+  .wall-right {
+    transform: translate3D(48em, -49em, -2.5em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity: 1;
+    width: 100em;
+    height: 100em;
+    margin: -50em 0 0 -50em;
+    .ft {
+      transform: translateZ(0.5em);
+    }
+    .bk {
+      transform: translateZ(-0.5em) rotateY(180deg);
+    }
+    .rt, .lt {
+      width: 1em;
+      height: 100em;
+    }
+    .tp, .bm {
+      width: 100em;
+      height: 1em;
+    }
+    .face {
+      background-color: #FFFFFF;
+    }
+  }
+  
+  /* .wall-lef styles */
+  
+  .wall-lef {
+    transform: translate3D(-2.5em, -48em, 48em) rotateX(0deg) rotateY(-90deg) rotateZ(0deg);
+    opacity: 1;
+    width: 100em;
+    height: 100em;
+    margin: -50em 0 0 -50em;
+    .ft {
+      transform: translateZ(0.5em);
+    }
+    .bk {
+      transform: translateZ(-0.5em) rotateY(180deg);
+    }
+    .rt, .lt {
+      width: 1em;
+      height: 100em;
+    }
+    .tp, .bm {
+      width: 100em;
+      height: 1em;
+    }
+    .face {
+      background-color: #FFFFFF;
+    }
+  }
