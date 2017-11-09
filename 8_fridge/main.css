@@ -1,5 +1,5 @@
 #tridiv {
-  perspective: 1200px;
+  perspective: 1500px;
   position: absolute;
   overflow: hidden;
   width: 100%;
@@ -7,10 +7,9 @@
   background: transparent;
   font-size: 50%; }
 
-.face {
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2); }
-
-.scene, .shape, .face, .face-wrapper, .cr {
+.scene,
+.shape,
+.shape > div {
   position: absolute;
   transform-style: preserve-3d; }
 
@@ -28,293 +27,164 @@
   width: 0;
   height: 0;
   transform-origin: 50%; }
+  .shape > div {
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transform-origin: 0 0;
+    backface-visibility: hidden;
+    background-size: 100% 100% !important;
+    background-position: center; }
 
-.face, .face-wrapper {
-  overflow: hidden;
-  transform-origin: 0 0;
-  backface-visibility: hidden; }
-
-.face {
-  background-size: 100% 100% !important;
-  background-position: center; }
-
-.face-wrapper .face {
-  left: 100%;
+.shape .ft {
   width: 100%;
   height: 100%; }
-
-.photon-shader {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%; }
-
-.side {
-  left: 50%; }
-
-.cr {
-  height: 100%; }
-  .cr .side {
-    height: 100%; }
-
-[class*="cuboid"] .ft {
-  width: 100%;
-  height: 100%; }
-[class*="cuboid"] .bk {
+.shape .bk {
   width: 100%;
   height: 100%;
   left: 100%; }
-[class*="cuboid"] .rt {
+.shape .rt {
   transform: rotateY(-90deg) translateX(-50%); }
-[class*="cuboid"] .lt {
+.shape .lt {
   transform: rotateY(90deg) translateX(-50%); }
-[class*="cuboid"] .tp {
+.shape .tp {
   transform: rotateX(90deg) translateY(-50%); }
-[class*="cuboid"] .bm {
+.shape .bm {
   transform: rotateX(-90deg) translateY(-50%); }
-[class*="cuboid"] .lt {
+.shape .lt {
   left: 100%; }
-[class*="cuboid"] .bm {
+.shape .bm {
   top: 100%; }
 
-/* .fridge-body styles */
+[class*="door"] > div {
+  background-color: #717171; }
+
 .fridge-body {
-  transform: translate3D(12em, -22.5em, 12em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  opacity: 1;
+  transform: translate3D(12em, -22.5em, 12em);
   width: 24em;
   height: 45em;
   margin: -22.5em 0 0 -12em; }
   .fridge-body .ft {
-    transform: translateZ(12em); }
+    transform: translateZ(12em);
+    background: linear-gradient(to right, #717171, #969696, 10%, #d6d6d6 50%, #969696 90%, #717171 100%); }
   .fridge-body .bk {
     transform: translateZ(-12em) rotateY(180deg); }
-  .fridge-body .rt, .fridge-body .lt {
+  .fridge-body .rt,
+  .fridge-body .lt {
     width: 24em;
-    height: 45em; }
-  .fridge-body .tp, .fridge-body .bm {
+    height: 45em;
+    background: linear-gradient(to right, #717171, #969696, 10%, #d6d6d6 50%, #969696 90%, #717171 100%); }
+  .fridge-body .tp,
+  .fridge-body .bm {
     width: 24em;
-    height: 24em; }
-  .fridge-body .face {
-    background-color: #FFFFFF; }
+    height: 24em;
+    background: radial-gradient(circle at 50% 50%, #d6d6d6, #969696, 90%, #717171 100%); }
 
-/* .freezer-door styles */
 .freezer-door {
-  transform: translate3D(24em, -36.5em, 12em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  opacity: 1;
+  transform: translate3D(24em, -36.5em, 12em);
   width: 2em;
   height: 14em;
   margin: -7em 0 0 -1em; }
   .freezer-door .ft {
-    transform: translateZ(10.5em); }
+    transform: translateZ(10.5em);
+    background: linear-gradient(to left, #969696, #717171); }
   .freezer-door .bk {
     transform: translateZ(-10.5em) rotateY(180deg); }
-  .freezer-door .rt, .freezer-door .lt {
+  .freezer-door .rt,
+  .freezer-door .lt {
     width: 21em;
-    height: 14em; }
-  .freezer-door .tp, .freezer-door .bm {
+    height: 14em;
+    background: linear-gradient(to right, #717171, #969696, 10%, #d6d6d6 50%, #969696 90%, #717171 100%); }
+  .freezer-door .tp,
+  .freezer-door .bm {
     width: 2em;
-    height: 21em; }
-  .freezer-door .face {
-    background-color: #FFFFFF; }
+    height: 21em;
+    background: linear-gradient(to left, #969696, #717171); }
 
-/* .fridge-door styles */
 .fridge-door {
-  transform: translate3D(26em, -15em, 12em) rotateX(0deg) rotateY(11deg) rotateZ(0deg);
-  opacity: 1;
+  transform: translate3D(26em, -15em, 12em) rotateY(11deg);
   width: 2em;
   height: 25.5em;
   margin: -12.75em 0 0 -1em; }
   .fridge-door .ft {
-    transform: translateZ(10.5em); }
+    transform: translateZ(10.5em);
+    background: linear-gradient(to left, #969696, #717171); }
   .fridge-door .bk {
     transform: translateZ(-10.5em) rotateY(180deg); }
-  .fridge-door .rt, .fridge-door .lt {
+  .fridge-door .rt,
+  .fridge-door .lt {
     width: 21em;
-    height: 25.5em; }
-  .fridge-door .tp, .fridge-door .bm {
+    height: 25.5em;
+    background: linear-gradient(to right, #717171, #969696, 10%, #d6d6d6 50%, #969696 90%, #717171 100%); }
+  .fridge-door .tp,
+  .fridge-door .bm {
     width: 2em;
-    height: 21em; }
-  .fridge-door .face {
-    background-color: #FFFFFF; }
+    height: 21em;
+    background: linear-gradient(to left, #969696, #717171); }
 
-/* .freezer-door-base-bottom styles */
-.freezer-door-base-bottom {
-  transform: translate3D(25.5em, -32em, 21em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  opacity: 1;
+[class*="door-base"] {
   width: 2em;
   height: 2em;
   margin: -1em 0 0 -1em; }
-  .freezer-door-base-bottom .ft {
+  [class*="door-base"] .ft {
     transform: translateZ(0.5em); }
-  .freezer-door-base-bottom .bk {
+  [class*="door-base"] .bk {
     transform: translateZ(-0.5em) rotateY(180deg); }
-  .freezer-door-base-bottom .rt, .freezer-door-base-bottom .lt {
+  [class*="door-base"] .rt,
+  [class*="door-base"] .lt {
     width: 1em;
     height: 2em; }
-  .freezer-door-base-bottom .tp, .freezer-door-base-bottom .bm {
+  [class*="door-base"] .tp,
+  [class*="door-base"] .bm {
     width: 2em;
     height: 1em; }
-  .freezer-door-base-bottom .face {
-    background-color: #FFFFFF; }
 
-/* .freezer-door-base-top styles */
-.freezer-door-base-top {
-  transform: translate3D(25.5em, -41em, 21em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  opacity: 1;
-  width: 2em;
-  height: 2em;
-  margin: -1em 0 0 -1em; }
-  .freezer-door-base-top .ft {
-    transform: translateZ(0.5em); }
-  .freezer-door-base-top .bk {
-    transform: translateZ(-0.5em) rotateY(180deg); }
-  .freezer-door-base-top .rt, .freezer-door-base-top .lt {
-    width: 1em;
-    height: 2em; }
-  .freezer-door-base-top .tp, .freezer-door-base-top .bm {
-    width: 2em;
-    height: 1em; }
-  .freezer-door-base-top .face {
-    background-color: #FFFFFF; }
-
-/* .freezer-door-base-top-1 styles */
-.freezer-door-base-top-1 {
-  transform: translate3D(25.51em, -411em, 211em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  opacity: 1;
-  width: 2em;
-  height: 2em;
-  margin: -1em 0 0 -1em; }
-  .freezer-door-base-top-1 .ft {
-    transform: translateZ(0.5em); }
-  .freezer-door-base-top-1 .bk {
-    transform: translateZ(-0.5em) rotateY(180deg); }
-  .freezer-door-base-top-1 .rt, .freezer-door-base-top-1 .lt {
-    width: 1em;
-    height: 2em; }
-  .freezer-door-base-top-1 .tp, .freezer-door-base-top-1 .bm {
-    width: 2em;
-    height: 1em; }
-  .freezer-door-base-top-1 .face {
-    background-color: #FFFFFF; }
-
-/* .freezer-door-base-top-2 styles */
-.freezer-door-base-top-2 {
-  transform: translate3D(25.51em, -411em, 211em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  opacity: 1;
-  width: 2em;
-  height: 2em;
-  margin: -1em 0 0 -1em; }
-  .freezer-door-base-top-2 .ft {
-    transform: translateZ(0.5em); }
-  .freezer-door-base-top-2 .bk {
-    transform: translateZ(-0.5em) rotateY(180deg); }
-  .freezer-door-base-top-2 .rt, .freezer-door-base-top-2 .lt {
-    width: 1em;
-    height: 2em; }
-  .freezer-door-base-top-2 .tp, .freezer-door-base-top-2 .bm {
-    width: 2em;
-    height: 1em; }
-  .freezer-door-base-top-2 .face {
-    background-color: #FFFFFF; }
-
-.freezer-door-beam {
-  transform: translate3D(26.5em, -36.5em, 21em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  opacity: 1;
+[class*="door-beam"] {
   width: 1em;
   height: 11em;
   margin: -5.5em 0 0 -0.5em; }
-  .freezer-door-beam .ft {
+  [class*="door-beam"] .ft {
     transform: translateZ(0.5em); }
-  .freezer-door-beam .bk {
+  [class*="door-beam"] .bk {
     transform: translateZ(-0.5em) rotateY(180deg); }
-  .freezer-door-beam .rt, .freezer-door-beam .lt {
+  [class*="door-beam"] .rt,
+  [class*="door-beam"] .lt {
     width: 1em;
     height: 11em; }
-  .freezer-door-beam .tp, .freezer-door-beam .bm {
+  [class*="door-beam"] .tp,
+  [class*="door-beam"] .bm {
     width: 1em;
     height: 1em; }
-  .freezer-door-beam .face {
-    background-color: #FFFFFF; }
 
-/* .fridge-inner styles */
+.freezer-door-base-bottom {
+  transform: translate3D(25.5em, -32em, 21em); }
+
+.freezer-door-base-top {
+  transform: translate3D(25.5em, -41em, 21em); }
+
+.fridge-door-base-top {
+  transform: translate3D(29em, -26em, 20.5em) rotateY(11deg); }
+
+.fridge-door-base-bottom {
+  transform: translate3D(29em, -17em, 20.5em) rotateY(11deg); }
+
+.freezer-door-beam {
+  transform: translate3D(26.5em, -36.5em, 21em); }
+
+.fridge-door-beam {
+  transform: translate3D(29.75em, -21.5em, 20.5em) rotateY(11deg); }
+
 .fridge-inner {
-  transform: translate3D(22em, -15em, 12.5em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  opacity: 1;
+  transform: translate3D(22em, -15em, 12.9em);
   width: 4em;
   height: 25em;
   margin: -12.5em 0 0 -2em; }
-  .fridge-inner .face {
-    background-color: #FFFFFF; }
   .fridge-inner .lt {
     width: 20em;
     height: 25em;
     background: #222; }
 
-/* .fridge-door-base-top styles */
-.fridge-door-base-top {
-  transform: translate3D(29em, -26em, 20.5em) rotateX(0deg) rotateY(11deg) rotateZ(0deg);
-  opacity: 1;
-  width: 2em;
-  height: 2em;
-  margin: -1em 0 0 -1em; }
-  .fridge-door-base-top .ft {
-    transform: translateZ(0.5em); }
-  .fridge-door-base-top .bk {
-    transform: translateZ(-0.5em) rotateY(180deg); }
-  .fridge-door-base-top .rt, .fridge-door-base-top .lt {
-    width: 1em;
-    height: 2em; }
-  .fridge-door-base-top .tp, .fridge-door-base-top .bm {
-    width: 2em;
-    height: 1em; }
-  .fridge-door-base-top .face {
-    background-color: #FFFFFF; }
-
-/* .fridge-door-base-bottom styles */
-.fridge-door-base-bottom {
-  transform: translate3D(29em, -17em, 20.5em) rotateX(0deg) rotateY(11deg) rotateZ(0deg);
-  opacity: 1;
-  width: 2em;
-  height: 2em;
-  margin: -1em 0 0 -1em; }
-  .fridge-door-base-bottom .ft {
-    transform: translateZ(0.5em); }
-  .fridge-door-base-bottom .bk {
-    transform: translateZ(-0.5em) rotateY(180deg); }
-  .fridge-door-base-bottom .rt, .fridge-door-base-bottom .lt {
-    width: 1em;
-    height: 2em; }
-  .fridge-door-base-bottom .tp, .fridge-door-base-bottom .bm {
-    width: 2em;
-    height: 1em; }
-  .fridge-door-base-bottom .face {
-    background-color: #FFFFFF; }
-
-/* .fridge-door-beam styles */
-.fridge-door-beam {
-  transform: translate3D(29.75em, -21.5em, 20.5em) rotateX(0deg) rotateY(11deg) rotateZ(0deg);
-  opacity: 1;
-  width: 1em;
-  height: 11em;
-  margin: -5.5em 0 0 -0.5em; }
-  .fridge-door-beam .ft {
-    transform: translateZ(0.5em); }
-  .fridge-door-beam .bk {
-    transform: translateZ(-0.5em) rotateY(180deg); }
-  .fridge-door-beam .rt, .fridge-door-beam .lt {
-    width: 1em;
-    height: 11em; }
-  .fridge-door-beam .tp, .fridge-door-beam .bm {
-    width: 1em;
-    height: 1em; }
-  .fridge-door-beam .face {
-    background-color: #FFFFFF; }
-
-/* .floor styles */
 .floor {
-  transform: translate3D(48em, 0.5em, 48em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  opacity: 1;
+  transform: translate3D(48em, 0.5em, 48em);
   width: 100em;
   height: 1em;
   margin: -0.5em 0 0 -50em; }
@@ -322,77 +192,55 @@
     transform: translateZ(50em); }
   .floor .bk {
     transform: translateZ(-50em) rotateY(180deg); }
-  .floor .rt, .floor .lt {
+  .floor .rt,
+  .floor .lt {
     width: 100em;
     height: 1em; }
-  .floor .tp, .floor .bm {
+  .floor .tp,
+  .floor .bm {
     width: 100em;
     height: 100em;
-    background: #fff; }
+    background-color: #543a53;
+    background-image: linear-gradient(45deg, #362535 25%, transparent 25%), linear-gradient(-45deg, #362535 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #362535 75%), linear-gradient(-45deg, transparent 75%, #362535 75%);
+    background-size: 13em !important;
+    background-position: 82% 97%; }
 
-/* .wall,right styles */
-.wall, right {
-  transform: translate3D(48em, -50em, -2em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  opacity: 1;
-  width: 100em;
-  height: 100em;
-  margin: -50em 0 0 -50em; }
-
-.wall, right .ft {
-  transform: translateZ(0.5em); }
-
-.wall, right .bk {
-  transform: translateZ(-0.5em) rotateY(180deg); }
-
-.wall, right .rt, .wall, right .lt {
-  width: 1em;
-  height: 100em; }
-
-.wall, right .tp, .wall, right .bm {
-  width: 100em;
-  height: 1em; }
-
-.wall, right .face {
-  background-color: #FFFFFF; }
-
-/* .wall-right styles */
 .wall-right {
-  transform: translate3D(48em, -49em, -2.5em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  opacity: 1;
+  transform: translate3D(48em, -49em, -2.5em);
   width: 100em;
   height: 100em;
   margin: -50em 0 0 -50em; }
   .wall-right .ft {
-    transform: translateZ(0.5em); }
+    transform: translateZ(0.5em);
+    background: linear-gradient(to bottom, black, #362535); }
   .wall-right .bk {
     transform: translateZ(-0.5em) rotateY(180deg); }
-  .wall-right .rt, .wall-right .lt {
+  .wall-right .rt,
+  .wall-right .lt {
     width: 1em;
     height: 100em; }
-  .wall-right .tp, .wall-right .bm {
+  .wall-right .tp,
+  .wall-right .bm {
     width: 100em;
     height: 1em; }
-  .wall-right .face {
-    background-color: #FFFFFF; }
 
-/* .wall-lef styles */
-.wall-lef {
-  transform: translate3D(-2.5em, -48em, 48em) rotateX(0deg) rotateY(-90deg) rotateZ(0deg);
-  opacity: 1;
+.wall-left {
+  transform: translate3D(-2.5em, -48em, 48em) rotateY(-90deg);
   width: 100em;
   height: 100em;
   margin: -50em 0 0 -50em; }
-  .wall-lef .ft {
+  .wall-left .ft {
     transform: translateZ(0.5em); }
-  .wall-lef .bk {
-    transform: translateZ(-0.5em) rotateY(180deg); }
-  .wall-lef .rt, .wall-lef .lt {
+  .wall-left .bk {
+    transform: translateZ(-0.5em) rotateY(180deg);
+    background: linear-gradient(to bottom, black, #362535); }
+  .wall-left .rt,
+  .wall-left .lt {
     width: 1em;
     height: 100em; }
-  .wall-lef .tp, .wall-lef .bm {
+  .wall-left .tp,
+  .wall-left .bm {
     width: 100em;
     height: 1em; }
-  .wall-lef .face {
-    background-color: #FFFFFF; }
 
 /*# sourceMappingURL=main.css.map */

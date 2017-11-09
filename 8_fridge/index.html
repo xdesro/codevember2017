@@ -10,7 +10,27 @@
 <body>
     <div id="tridiv">
         <div class="scene">
-          <div class="shape cuboid-1 fridge-body">
+          <div class="shape fridge-body">
+            <div class="face ft"></div>
+            <div class="face lt"></div>
+            <div class="face tp"></div>
+          </div>
+          <div class="shape freezer-door">
+            <div class="face ft"></div>
+            <div class="face lt"></div>
+            <div class="face tp"></div>
+          </div>
+          <div class="shape fridge-door">
+            <div class="face ft"></div>
+            <div class="face lt"></div>
+            <div class="face tp"></div>
+          </div>
+          <div class="shape freezer-door-base-bottom">
+            <div class="face ft"></div>
+            <div class="face lt"></div>
+            <div class="face tp"></div>
+          </div>
+          <div class="shape freezer-door-base-top">
             <div class="face ft"></div>
             <div class="face bk"></div>
             <div class="face rt"></div>
@@ -18,7 +38,7 @@
             <div class="face bm"></div>
             <div class="face tp"></div>
           </div>
-          <div class="shape cuboid-2 freezer-door">
+          <div class="shape freezer-door-beam">
             <div class="face ft"></div>
             <div class="face bk"></div>
             <div class="face rt"></div>
@@ -26,7 +46,10 @@
             <div class="face bm"></div>
             <div class="face tp"></div>
           </div>
-          <div class="shape cuboid-3 fridge-door">
+          <div class="shape fridge-inner">
+            <div class="face lt"></div>
+          </div>
+          <div class="shape fridge-door-base-top">
             <div class="face ft"></div>
             <div class="face bk"></div>
             <div class="face rt"></div>
@@ -34,7 +57,7 @@
             <div class="face bm"></div>
             <div class="face tp"></div>
           </div>
-          <div class="shape cuboid-4 freezer-door-base-bottom">
+          <div class="shape fridge-door-base-bottom">
             <div class="face ft"></div>
             <div class="face bk"></div>
             <div class="face rt"></div>
@@ -42,7 +65,7 @@
             <div class="face bm"></div>
             <div class="face tp"></div>
           </div>
-          <div class="shape cuboid-5 freezer-door-base-top">
+          <div class="shape fridge-door-beam">
             <div class="face ft"></div>
             <div class="face bk"></div>
             <div class="face rt"></div>
@@ -50,90 +73,18 @@
             <div class="face bm"></div>
             <div class="face tp"></div>
           </div>
-          <div class="shape cuboid-6 freezer-door-base-top-1">
-            <div class="face ft"></div>
-            <div class="face bk"></div>
-            <div class="face rt"></div>
-            <div class="face lt"></div>
-            <div class="face bm"></div>
+          <div class="shape floor">
             <div class="face tp"></div>
           </div>
-          <div class="shape cuboid-7 freezer-door-base-top-2">
+          <div class="shape wall-right">
             <div class="face ft"></div>
-            <div class="face bk"></div>
-            <div class="face rt"></div>
-            <div class="face lt"></div>
-            <div class="face bm"></div>
-            <div class="face tp"></div>
           </div>
-          <div class="shape cuboid-8 freezer-door-beam">
-            <div class="face ft"></div>
+          <div class="shape wall-left">
             <div class="face bk"></div>
-            <div class="face rt"></div>
-            <div class="face lt"></div>
-            <div class="face bm"></div>
-            <div class="face tp"></div>
-          </div>
-          <div class="shape cuboid-10 fridge-inner">
-            <div class="face lt"></div>
-          </div>
-          <div class="shape cuboid-11 fridge-door-base-top">
-            <div class="face ft"></div>
-            <div class="face bk"></div>
-            <div class="face rt"></div>
-            <div class="face lt"></div>
-            <div class="face bm"></div>
-            <div class="face tp"></div>
-          </div>
-          <div class="shape cuboid-12 fridge-door-base-bottom">
-            <div class="face ft"></div>
-            <div class="face bk"></div>
-            <div class="face rt"></div>
-            <div class="face lt"></div>
-            <div class="face bm"></div>
-            <div class="face tp"></div>
-          </div>
-          <div class="shape cuboid-13 fridge-door-beam">
-            <div class="face ft"></div>
-            <div class="face bk"></div>
-            <div class="face rt"></div>
-            <div class="face lt"></div>
-            <div class="face bm"></div>
-            <div class="face tp"></div>
-          </div>
-          <div class="shape cuboid-9 floor">
-            <div class="face ft"></div>
-            <div class="face bk"></div>
-            <div class="face rt"></div>
-            <div class="face lt"></div>
-            <div class="face bm"></div>
-            <div class="face tp"></div>
-          </div>
-          <div class="shape cuboid-14 wall,right">
-            <div class="face ft"></div>
-            <div class="face bk"></div>
-            <div class="face rt"></div>
-            <div class="face lt"></div>
-            <div class="face bm"></div>
-            <div class="face tp"></div>
-          </div>
-          <div class="shape cuboid-15 wall-right">
-            <div class="face ft"></div>
-            <div class="face bk"></div>
-            <div class="face rt"></div>
-            <div class="face lt"></div>
-            <div class="face bm"></div>
-            <div class="face tp"></div>
-          </div>
-          <div class="shape cuboid-16 wall-lef">
-            <div class="face ft"></div>
-            <div class="face bk"></div>
-            <div class="face rt"></div>
-            <div class="face lt"></div>
-            <div class="face bm"></div>
-            <div class="face tp"></div>
           </div>
         </div>
       </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+      <script src="scripts.js"></script>
 </body>
 </html>
