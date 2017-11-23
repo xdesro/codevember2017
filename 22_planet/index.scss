@@ -1,0 +1,237 @@
+$bunting: #1a1546;
+$valentino: #31104b;
+$violet:#7800ef;
+$clairvoyant: #6a0071;
+$flirt: #a6009f;
+$rose: #ff006c;
+$flush: #ff7f00;
+$supernova: #ffcf00;
+
+body {
+  background: radial-gradient(circle at center, $clairvoyant, $bunting 80%);
+  height: 100vh;
+  width: 100vw;
+}
+.planet {
+  border-radius: 100%;
+  background-image: radial-gradient(circle at center, $valentino, $bunting);
+  position: absolute;
+}
+.main {
+  top: 50%;
+  margin: -25vmin auto 0;
+  height: 50vmin;
+  width: 50vmin;
+  left: 0;
+  right: 0;
+
+  background: linear-gradient(-45deg, $clairvoyant, $flirt, $clairvoyant);
+  &:before {
+    content: "";
+    background-image: radial-gradient(circle at center, $valentino, $bunting);
+    position: absolute;
+    top: 3px;
+    right: 1px; // opacity: .5;
+    height: 102%;
+    width: 102%;
+    z-index: 1;
+    filter: blur(1px);
+    border-radius: 100%;
+  }
+}
+.mid {
+  height: 15vmin;
+  width: 15vmin;
+  top: 70%;
+  left: 15vmin;
+  background: linear-gradient(-45deg, $clairvoyant, $flirt, $clairvoyant);
+  &:before {
+    background: linear-gradient(to bottom, $valentino, $bunting);
+    content: "";
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    // opacity: .5;
+    height: 102%;
+    width: 102%;
+    border-radius: 100%;
+  }
+}
+.small {
+  height: 3.5vmin;
+  width: 3.5vmin;
+  background: linear-gradient(to bottom right, $valentino 30%, $rose);
+  left: 10%;
+  z-index: -2;
+  top: 30%;
+}
+
+$splashHeight: 6px;
+.splash {
+  width: 35px;
+  position: absolute;
+  z-index: -2;
+  .one,
+  .two,
+  .three {
+    width: 35px;
+    height: $splashHeight;
+    border-radius: $splashHeight;
+    position: absolute;
+  }
+  .one {
+    z-index: -2;
+    top: -$splashHeight+1px;
+    right: -$splashHeight;
+    background: linear-gradient(to right, $flush, $supernova);
+  }
+  .two {
+    background: linear-gradient(to right, $rose, $flush);
+  }
+  .three {
+    background: $rose;
+    top: $splashHeight - 1px;
+    right: $splashHeight;
+  }
+  &.left {
+    transform: rotate(45deg);
+    right: 50%;
+  }
+  &.right {
+    left: 50%;
+    transform: rotate(-45deg);
+    .one {
+      background: linear-gradient(to left, $flush, $supernova);
+      right: $splashHeight;
+    }
+    .two {
+      background: linear-gradient(to left, $rose, $flush);
+    }
+    .three {
+      right: 2px;
+    }
+  }
+  .drip {
+    border-radius: 100%;
+    height: $splashHeight;
+    width: $splashHeight;
+    position: absolute;
+    background: $rose;
+    right: -1 * $splashHeight - 1px;
+  }
+}
+.stem {
+  width: 1.6 * $splashHeight;
+  height: 80px;
+  background: $rose;
+  background: radial-gradient(circle at bottom center, $supernova, $rose, #9f00cb);
+  position: absolute;
+  left: 50%;
+  margin-left: -0.8 * $splashHeight;
+  top: -75px;
+  z-index: -1;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: radial-gradient(
+      circle at bottom center,
+      $supernova,
+      $rose,
+      #9f00cb
+    );
+    filter: blur(4px);
+  }
+}
+.mushroom {
+  border-radius: 100%;
+  width: 52px;
+  height: 42px;
+  background: linear-gradient(
+    to bottom,
+    $rose,
+    $clairvoyant 20%,
+    $violet 25%,
+    transparentize($violet, 1) 30%
+  );
+  position: absolute;
+  &:nth-last-child(1) {
+    top: -40px;
+    left: 50%;
+    margin-left: -26px;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      border-radius: 100%;
+      background: linear-gradient(
+        to bottom,
+        $rose,
+        $clairvoyant 20%,
+        $violet 25%,
+        transparentize($violet, 1) 30%
+      );
+      filter: blur(4px);
+    }
+  }
+  &:nth-last-child(2) {
+    top: -80px;
+    left: 50%;
+    width: 80px;
+    height: 70px;
+    margin-left: -40px;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      border-radius: 100%;
+      background: linear-gradient(
+        to bottom,
+        $rose,
+        $clairvoyant 20%,
+        $violet 25%,
+        transparentize($violet, 1) 30%
+      );
+      filter: blur(4px);
+    }
+  }
+}
+.ring {
+  height: 30px;
+  width: 100px;
+  border-radius: 100%;
+  border-top: 5px solid;
+  border-color: $rose;
+  position: absolute;
+  top: -100px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: rotateX(50deg);
+  &:before {
+    z-index: -3;
+    position: absolute;
+    content: "";
+    top: -5px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 100%;
+    border: 5px solid;
+    border-color: $clairvoyant;
+    border-top: none;
+    filter: blur(2px);
+  }
+}
