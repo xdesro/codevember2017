@@ -1,0 +1,35 @@
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(
+      name='viewport'
+      content='width=device-width, initial-scale=1.0'
+    )
+    meta(
+      http-equiv='X-UA-Compatible'
+      content='ie=edge'
+    )
+    link(
+      rel='stylesheet'
+      href='main.css'
+    )
+  body
+    .wrapper
+      .rings
+        - var n = 0
+          while n < 4
+            .ring
+              - n++
+      .rocket
+      .jet-wrapper
+        .jet
+      .clouds
+        - var n2 = 0
+          while n2 < 13
+            .cloud
+              - n2++
+        .fill
+        .fill
+    script(src='anime.min.js')
+    script(src='index.js')
