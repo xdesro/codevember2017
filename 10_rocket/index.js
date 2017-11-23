@@ -3,7 +3,7 @@ const ring = anime.timeline({
   complete: () => {
     launch.play();
   }
-})
+});
 ring
   .add({
     targets: ".ring:nth-of-type(2)",
@@ -24,17 +24,16 @@ ring
     targets: ".rocket",
     rotate: ["180deg", "0deg"],
     translateX: ["-50%", "-50%"],
-    translateY: ['-100%', '0%'],
+    translateY: ["-100%", "0%"],
     opacity: [0, 1],
     offset: 0,
-    easing: 'easeInOutQuad',
+    easing: "easeInOutQuad",
     duration: 1000
   });
-  
 
 const launch = anime.timeline({
   autoplay: false
-})
+});
 launch
   .add({
     targets: ".clouds .cloud, .clouds .fill",
@@ -54,4 +53,4 @@ launch
     top: ["50%", "-15%"],
     easing: "easeInOutQuad",
     offset: 50
-  })
+  });

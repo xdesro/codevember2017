@@ -1,6 +1,6 @@
 $metallic-gradient-linear: linear-gradient( to right, #717171, #969696, 10%, #d6d6d6 50%, #969696 90%, #717171 100%);
 $metallic-gradient-radial: radial-gradient( circle at 50% 50%, #d6d6d6, #969696, 90%, #717171 100%);
-#tridiv {
+body {
   perspective: 1500px;
   position: absolute;
   overflow: hidden;
