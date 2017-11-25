@@ -1,0 +1,23 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background: #f7f7f7; */
+  background: #222;
+}
+#svg {
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+}
+#heart {
+  fill: #7FD1B9;
+}
+#circle-right {
+  transform: translateX(-60px);
+}
+#circle-left {
+  transform: translateY(60px);
+  /* opacity: 0; */
+}
